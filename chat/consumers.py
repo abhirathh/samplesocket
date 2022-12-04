@@ -87,9 +87,7 @@ class DashConsumer(AsyncWebsocketConsumer):
 class ChatConsumer(WebsocketConsumer):
 
     def connect(self):
-        # print(self.scope["url_route"]["kwargs"]["room"])
-        # # print('ROOM KEY: ', room_key)
-        # print(self.kwargs['room'])
+        print(self.scope["url_route"]["kwargs"]["room"])
 
         room_key = secrets.token_hex(10)
 
@@ -102,10 +100,10 @@ class ChatConsumer(WebsocketConsumer):
         self.channel_name,
         )
 
-        self.send(text_data=json.dumps({
-            'type': 'connection_established',
-            'message': 'You are now connected!',
-        }))
+        # self.send(text_data=json.dumps({
+        #     'type': 'connection_established',
+        #     'message': 'You are now connected!',
+        # }))
 
     def disconnect(self, close_code):
         async_to_sync(self.channel_layer.group_discard)(
@@ -118,14 +116,16 @@ class ChatConsumer(WebsocketConsumer):
         message = text_data_json
 
         print('Received')
-
+        print(message['message'])
         async_to_sync(self.channel_layer.group_send)(
         self.room_group_name,
             {
         'type': 'send_data',
-        'message': 'Order Placed',
+        'message': message,
+        'bot_message': f"You said {message['message']}",
             }
         )
 
     def send_data(self, event):
+        time.sleep(2)
         self.send(text_data = json.dumps(event))

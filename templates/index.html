@@ -44,11 +44,11 @@
                 </button>
               </div>
               <div
-                class="card-body scrollbar scrollbar-primary"
+                class="card-body scrollbar scrollbar-primary chatboxdiv"
                 data-perfect-scrollbar="true"
                 style="position: relative; height: 400px; overflow-y: scroll" id="chatbody"
               >
-                <div class="d-flex flex-row justify-content-start">
+                <!-- <div class="d-flex flex-row justify-content-start">
                   <img
                     src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp"
                     alt="avatar 1"
@@ -75,15 +75,17 @@
                     </p>
                     <p class="small ms-3 mb-3 rounded-3 text-muted">23:58</p>
                   </div>
-                </div>
+                </div> -->
 
-                <div class="divider d-flex align-items-center mb-4">
+                <!-- <div class="divider d-flex align-items-center mb-4">
                   <p class="text-center mx-3 mb-0" style="color: #a2aab7">
                     Today
                   </p>
-                </div>
+                </div> -->
 
-                <div class="d-flex flex-row justify-content-end mb-4 pt-1">
+
+                <!-- multichat -->
+                <!-- <div class="d-flex flex-row justify-content-end mb-4 pt-1">
                   <div>
                     <p
                       class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary"
@@ -100,20 +102,16 @@
                     >
                       Long time no see! Tomorrow office. will be free on sunday.
                     </p>
-                    <p
-                      class="small me-3 mb-3 rounded-3 text-muted d-flex justify-content-end"
-                    >
-                      00:06
-                    </p>
                   </div>
                   <img
                     src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava4-bg.webp"
                     alt="avatar 1"
                     style="width: 45px; height: 100%"
                   />
-                </div>
+                </div> -->
+                <!-- multichat -->
 
-                <div class="d-flex flex-row justify-content-start mb-4">
+                <!-- <div class="d-flex flex-row justify-content-start mb-4">
                   <img
                     src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp"
                     alt="avatar 1"
@@ -134,9 +132,9 @@
                     </p>
                     <p class="small ms-3 mb-3 rounded-3 text-muted">00:07</p>
                   </div>
-                </div>
+                </div> -->
 
-                <div class="d-flex flex-row justify-content-end mb-4">
+                <!-- <div class="d-flex flex-row justify-content-end mb-4">
                   <div>
                     <p
                       class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary"
@@ -164,9 +162,9 @@
                     alt="avatar 1"
                     style="width: 45px; height: 100%"
                   />
-                </div>
+                </div> -->
 
-                <div class="d-flex flex-row justify-content-start mb-4">
+                <!-- <div class="d-flex flex-row justify-content-start mb-4 botmessagediv">
                   <img
                     src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp"
                     alt="avatar 1"
@@ -179,11 +177,10 @@
                     >
                       Okay i will meet you on Sandon Square
                     </p>
-                    <p class="small ms-3 mb-3 rounded-3 text-muted">00:11</p>
                   </div>
-                </div>
+                </div> -->
 
-                <div class="d-flex flex-row justify-content-end mb-4">
+                <!-- <div class="d-flex flex-row justify-content-end mb-4">
                   <div>
                     <p
                       class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary"
@@ -201,9 +198,9 @@
                     alt="avatar 1"
                     style="width: 45px; height: 100%"
                   />
-                </div>
+                </div> -->
 
-                <div class="d-flex flex-row justify-content-start mb-4">
+                <!-- <div class="d-flex flex-row justify-content-start mb-4">
                   <img
                     src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp"
                     alt="avatar 1"
@@ -218,19 +215,14 @@
                     </p>
                     <p class="small ms-3 mb-3 rounded-3 text-muted">00:13</p>
                   </div>
-                </div>
+                </div> -->
 
-                <div class="d-flex flex-row justify-content-end mb-4">
-                  <div>
+                <!-- <div class="d-flex flex-row justify-content-end mb-4 userchatdiv">
+                  <div class="userchatmessagediv">
                     <p
-                      class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary"
+                      class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary userchat"
                     >
                       Okay then see you on sunday!!
-                    </p>
-                    <p
-                      class="small me-3 mb-3 rounded-3 text-muted d-flex justify-content-end"
-                    >
-                      00:15
                     </p>
                   </div>
                   <img
@@ -238,7 +230,7 @@
                     alt="avatar 1"
                     style="width: 45px; height: 100%"
                   />
-                </div>
+                </div> -->
               </div>
               <div
                 class="card-footer text-muted d-flex justify-content-start align-items-center p-3"
@@ -251,9 +243,18 @@
                 <input
                   type="text"
                   class="form-control form-control-lg"
-                  id="exampleFormControlInput1"
-                  placeholder="Type message"
+                  id="id_message_send_input"
+                  placeholder="Action Symbol Qty. Price."
                 />
+
+                <button
+                  type="button"
+                  class="btn btn-primary btn-sm" style="margin-left:10px;"
+                  data-mdb-ripple-color="dark" id="id_message_send_button"
+                >
+                  Send
+                </button>
+                <!-- <button type="button" name="button" class="btn btn-primary">Send</button> -->
                 <a class="ms-1 text-muted" href="#!"
                   ><i class="fas fa-paperclip"></i
                 ></a>
@@ -271,6 +272,66 @@
     var chatbody = document.querySelector('#chatbody');
     chatbody.scrollTop = chatbody.scrollHeight - chatbody.clientHeight;
 
+    const chatSocket = new WebSocket("ws://" + window.location.host + "/ws/socket-server/1234");
+  	chatSocket.onopen = function (e) {
+  		console.log("The connection was setup successfully !");
+  	};
+  	chatSocket.onclose = function (e) {
+  		console.log("Something unexpected happened !");
+  	};
+  	document.onkeydown = function (e) {
+  		if (e.keyCode == 13) {
+  		document.querySelector("#id_message_send_button").click();
+  		}
+  	};
+  	document.querySelector("#id_message_send_button").onclick = function (e) {
+  		var messageInput = document.querySelector(
+  		"#id_message_send_input"
+  		).value;
+  		chatSocket.send(JSON.stringify({ message: messageInput, username : "{{request.user.username}}"}));
+      document.querySelector('.chatboxdiv').innerHTML += `<div class="d-flex flex-row justify-content-end mb-4 userchatdiv">
+        <div class="userchatmessagediv">
+          <p
+            class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary userchat"
+          >
+            ${messageInput}
+          </p>
+        </div>
+        <img
+          src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava4-bg.webp"
+          alt="avatar 1"
+          style="width: 45px; height: 100%"
+        />
+      </div>`
+      chatbody.scrollTop = chatbody.scrollHeight - chatbody.clientHeight;
+      document.querySelector("#id_message_send_input").value = "";
+  	};
+  	chatSocket.onmessage = function (e) {
+      console.log(e);
+  		const data = JSON.parse(e.data);
+  		var div = document.createElement("div");
+      console.log(data);
+      document.querySelector('.chatboxdiv').innerHTML += `
+            <div class="d-flex flex-row justify-content-start mb-4 botmessagediv">
+        <img
+          src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp"
+          alt="avatar 1"
+          style="width: 45px; height: 100%"
+        />
+        <div>
+          <p
+            class="small p-2 ms-3 mb-1 rounded-3"
+            style="background-color: #f5f6f7"
+          >
+            ${data.bot_message}
+          </p>
+        </div>
+      </div>
+      `
+      chatbody.scrollTop = chatbody.scrollHeight - chatbody.clientHeight;
+
+  		// document.querySelector(".chatboxdiv").innerHTML += document.querySelector('.userchatdiv').innerHTML
+  	};
     </script>
   </body>
 </html>
